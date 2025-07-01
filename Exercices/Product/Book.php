@@ -1,28 +1,32 @@
 <?php
 
-require_once 'Produit.php';
+require_once 'Product.php';
 
-class Livre extends Produit
+/**
+ * Classe enfant de Produit, Livre représente 
+ * un livre dans l'application
+ */
+class Book extends Product
 {
+    // Les propriétés de la classe (variables)
     private int $nbPage;
     private string $auteur;
     private string $edition;
     private string $isbn = 'Non renseigné';
 
     /**
-     * Get the value of nbPage
+     * Récupèrer la valeur : nbPage
      */ 
-    public function getNbPage(): int  //méthode publique pour accéder à cette propriété 
+    public function getNbPage(): int
     {
         return $this->nbPage;
     }
 
     /**
-     * Set the value of nbPage
-     * Muter la valeur : titre
+     * Muter la valeur : nbPage
      * @return  self
      */ 
-    public function setNbPage(int $nbPage): Livre
+    public function setNbPage(int $nbPage): Book
     {
         $this->nbPage = $nbPage;
 
@@ -30,7 +34,7 @@ class Livre extends Produit
     }
 
     /**
-     * Get the value of auteur
+     * Récupèrer la valeur : auteur
      */ 
     public function getAuteur(): string
     {
@@ -38,11 +42,10 @@ class Livre extends Produit
     }
 
     /**
-     * Set the value of auteur
-     * Muter la valeur : titre
+     * Muter la valeur : auteur
      * @return  self
      */ 
-    public function setAuteur($auteur): Livre
+    public function setAuteur(string $auteur): Book
     {
         $this->auteur = $auteur;
 
@@ -50,7 +53,7 @@ class Livre extends Produit
     }
 
     /**
-     * Get the value of edition
+     * Récupèrer la valeur : edition
      */ 
     public function getEdition(): string
     {
@@ -58,11 +61,10 @@ class Livre extends Produit
     }
 
     /**
-     * Set the value of edition
-     * Muter la valeur : titre
+     * Muter la valeur : edition
      * @return  self
      */ 
-    public function setEdition($edition): Livre
+    public function setEdition(string $edition): Book
     {
         $this->edition = $edition;
 
@@ -70,7 +72,7 @@ class Livre extends Produit
     }
 
     /**
-     * Get the value of isbn
+     * Récupèrer la valeur : isbn
      */ 
     public function getIsbn(): string
     {
@@ -78,15 +80,14 @@ class Livre extends Produit
     }
 
     /**
-     * Set the value of isbn
-     * Muter la valeur : titre
+     * Muter la valeur : isbn
      * @return  self
      */ 
-    public function setIsbn($isbn): Livre
+    public function setIsbn(string $isbn): Book
     {
         $this->isbn = $isbn;
 
         return $this;
     }
 }
-
+// Ne rien écrire après cette accolade
