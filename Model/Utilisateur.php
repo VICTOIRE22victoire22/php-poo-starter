@@ -19,7 +19,7 @@ class Utilisateur
 
     /**
      * Set the value of nom
-     * Muter la valeur : nom
+     * Muter la valeur : titre
      * @return  self
      */ 
     public function setNom(string $nom): Utilisateur
@@ -50,7 +50,7 @@ class Utilisateur
     }
 
     /**
-     * Get the value of indentifiant
+     * Get the value of identifiant
      */ 
     public function getIdentifiant(): string
     {
@@ -58,13 +58,13 @@ class Utilisateur
     }
 
     /**
-     * Set the value of indentifiant
+     * Set the value of identifiant
      * Muter la valeur : titre
      * @return  self
      */ 
-    public function setIdentifiant(string $indentifiant): Utilisateur
+    public function setIdentifiant(string $identifiant): Utilisateur
     {
-        $this->identifiant = $indentifiant;
+        $this->identifiant = $identifiant;
 
         return $this;
     }
